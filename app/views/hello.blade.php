@@ -3,10 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <title>Laravel 4 Deployment Tutorial</title>
-        {{ Form::assets("header-css") }}
+
     </head>
     <body>
         <h1>I JUST LOVE THIS</h1>
-        {{ Form::assets("footer-js") }}
     </body>
 </html>
