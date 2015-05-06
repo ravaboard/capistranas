@@ -55,6 +55,3 @@ Route::any('/pokemon/{pokemon}', function($pokemon) {
     return Pokemon::getPokemon($pokemon);
 });
 
-Route::any('start', function() {
-   dd(App::getConfig());
-});

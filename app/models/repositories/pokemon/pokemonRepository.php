@@ -42,7 +42,7 @@ class PokemonRepository implements PokemonInterface
     {
         // Search by name
         $pokemon = $this->pokemonModel->where('name', strtolower($pokemonName));
-        
+                dd($pokemon->first()->name);
         if ($pokemon) 
         {
             // Return first found row
@@ -68,7 +68,7 @@ class PokemonRepository implements PokemonInterface
         $object = new stdClass();
         $object->id = $pokemon->id;
         $object->name = $pokemon->name;
-        
+       
         return $object;
     }
 }

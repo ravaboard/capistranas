@@ -9,7 +9,7 @@ class PokemonService
 {
     // Containing our pokemonRepository to make all our database calls to
     protected $pokemonRepo;
-    
+  
     /**
     * Loads our $pokemonRepo with the actual Repo associated with our pokemonInterface
     * 
@@ -19,6 +19,7 @@ class PokemonService
     public function __construct(pokemonInterface $pokemonRepo)
     {
         $this->pokemonRepo = $pokemonRepo;
+	
     }
 
     /**
@@ -34,11 +35,13 @@ class PokemonService
         {
             // Get pokemon based on ID
             $pokemon = $this->pokemonRepo->getPokemonById($pokemon);
+			
         }
         else 
         {
             // Since not numeric, lets try get the pokemon based on Name
             $pokemon = $this->pokemonRepo->getPokemonByName($pokemon);
+			
         }
         
         // If Eloquent Object returned (rather than null) return the name of the pokemon
